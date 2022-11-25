@@ -1,0 +1,33 @@
+/* .tableContainer {
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .row {
+    display: flex;
+    width: 100%;
+    scroll-behavior: auto;
+} */
+
+.rowCell {
+    padding: 0.1rem;
+    border: 2px solid lightskyblue;
+    border-right: 0px;
+    font-size: 0.9rem;
+}
+.topRow, .leftCol {
+    position: sticky;
+    left: 0;
+    background-color: lightskyblue;
+}
+
+/* 
+.time {
+    font-size: small;
+} */
+
+@media screen and (max-width: 768px) {
+    .container {
+        color: red;
+    }
+}
