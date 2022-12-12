@@ -4,9 +4,13 @@ import styles from '../styles/Home.module.css'
 import TableStyles from '../styles/TableStyles.module.css'
 import { useState } from 'react';
 import {Decimal} from 'decimal.js';
+import useWindowDimensions from '../hooks/useWindowDimensions';
 
 
 export default function Home() {
+
+  const { height, width } = useWindowDimensions();
+
   const mileMarkers = () => {
     let arrayOfMiles = []
     for (let i = 1; i < 27; i++) {
@@ -77,7 +81,11 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        footer
+        {width <= 768 ? 'mobile' : 'desktop'}
+        <div>
+          <span>height: {height}</span><br/>
+          <span>width: {width}</span>
+        </div>
       </footer>
     </div>
   )
